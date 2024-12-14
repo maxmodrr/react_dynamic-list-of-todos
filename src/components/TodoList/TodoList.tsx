@@ -5,7 +5,7 @@ import classNames from 'classnames';
 interface Props {
   todos: Todo[];
   onTodo: (u: Todo) => void;
-  onCurrentIcon: (v: HTMLElement) => void;
+  onCurrentIcon: (v: HTMLElement | null) => void;
 }
 
 export const TodoList: React.FC<Props> = ({ todos, onTodo, onCurrentIcon }) => {

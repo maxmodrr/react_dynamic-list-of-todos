@@ -33,9 +33,9 @@ function getFilterTodos(todos: Todo[], query: string, filterBy: string) {
 export const App: React.FC = () => {
   const [todos, setTodos] = useState<Todo[]>([]);
   const [query, setQuery] = useState('');
-  const [filterBy, setFilterBy] = useState<string>('');
+  const [filterBy, setFilterBy] = useState<string>(FILTER_BY.ALL);
   const [loading, setLoading] = useState(true);
-  const [todo, setTodo] = useState<Todo | null>();
+  const [todo, setTodo] = useState<Todo | null>(null);
   const [currentIcon, setCurrentIcon] = useState<HTMLElement | null>(null);
 
   const filteredTodos = getFilterTodos(todos, query, filterBy);
